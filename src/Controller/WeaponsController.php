@@ -17,8 +17,8 @@ class WeaponsController extends AbstractController
             'weapons' => Weapon::$weapons,
         ]);
     }
-    #[Route('/weapons/{name}', name: 'show_weapons')]
-    public function weapon($name):Response 
+    #[Route('/weapons/{name}', name: 'show_weapon')]
+    public function weapon($name): Response 
     {
         Weapon::createWeapon();
         $arme = Weapon::getWeaponByName($name);
